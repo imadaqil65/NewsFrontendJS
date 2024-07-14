@@ -1,0 +1,11 @@
+.newsLink{
+    width:50rem;;
+    min-height: 16rem;
+    height: fit-content;
+  }
+
+.newsLink:hover{
+    color: aliceblue;
+    background-color: #006fe7;
+    transition: 0.3s;
+  }

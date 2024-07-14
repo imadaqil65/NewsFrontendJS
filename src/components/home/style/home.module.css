@@ -1,0 +1,27 @@
+.shadow {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-shadow:
+      -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+      1px 1px 0 #000;
+  }
+
+.imageSize{
+  min-height: 40vh;
+  max-height: 40vh;
+  object-fit: cover;
+}
+
+.newsLink:hover{
+  color: aliceblue;
+  background-color: #006fe7;
+  transition: 0.3s;
+}
+
+@media screen and (max-width: 991px) {
+  .imageSize{
+    min-height: 45vh;
+    object-fit: cover;
+  }
+}

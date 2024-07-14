@@ -1,0 +1,23 @@
+#serif-font{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: x-large;
+}
+
+.bg-body-grey{
+    background-color: #eee;
+}
+
+.min-vw-50{
+    min-width: 50vw;
+}
+
+.nav-layout{
+    padding-right: 7rem;
+    padding-left: 4rem;
+}
+
+@media screen and (max-width: 991px) {
+    .nav-layout{
+        padding-right: 3rem;
+    }
+}

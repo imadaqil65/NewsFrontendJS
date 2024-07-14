@@ -1,0 +1,18 @@
+.customSelect {
+    max-width: fit-content; /* Optional: Maximum width */
+}
+
+.customSearch {
+    max-width: 40rem; /* Optional: Maximum width */
+}
+
+.newsHeader{
+    margin-left: 3rem;
+}
+
+@media screen and (max-width: 991px) {
+    .newsHeader{
+        margin-left: 0;
+        padding:1rem;
+    }
+}

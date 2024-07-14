@@ -1,0 +1,42 @@
+stages:
+  - build
+  - docker
+  - test
+
+build:
+  stage: build
+  script:
+    - ls
+    - pwd
+    - npm i
+    - npm run
+
+docker-clean-image:
+  stage: docker
+  script:
+    - ls
+    - pwd
+    - npm i
+    - npm run
+    - docker stop dipadunia_client
+    - docker rm dipadunia_client
+    - docker rmi clientside-ind 
+    - docker build -t clientside-ind -f ./Dockerfile .
+
+docker-container:
+  stage: docker 
+  script:
+    - ls
+    - pwd
+    - docker run -d -p 3090:3000 --net=s3_individual_news_network --name=dipadunia_client clientside-ind
+
+test:
+  image: cypress/browsers:node-20.9.0-chrome-118.0.5993.88-1-ff-118.0.2-edge-118.0.2088.46-1
+  stage: test
+  script:
+    - npm i
+    - npm run
+    - npm ci
+    - npx cypress run --browser firefox
+
+

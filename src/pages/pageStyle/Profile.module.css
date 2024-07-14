@@ -1,0 +1,111 @@
+.profileCon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 40rem;
+    width: 25rem;
+    background-color: #eee;
+    padding: 3rem;
+    transition: width 0.5s ease;
+    border-radius: 2rem;
+}
+
+.profilePage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    min-width: 100vw;
+}
+
+.profileCon.editMode {
+    width: 60rem;
+}
+
+.ProfileForm {
+    display: none;
+    width: 100%;
+    height: 100%;
+    transition: width 0.5s ease;
+}
+
+.insideProfileCon {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background-color: aliceblue;
+    border-radius: 1rem;
+    flex-direction: row;
+}
+
+.profileInfoCon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.profile {
+    display: inherit;
+    flex-direction: column;
+    width: 18rem;
+}
+
+.profile p {
+    margin-top: 0.2rem;
+}
+
+.profile img {
+    align-self: center;
+    width: 60%;
+}
+
+.ProfileForm.show {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-right: 2rem;
+}
+
+#Cancel {
+    background-color: var(--RoseTaupe);
+    color: white;
+}
+
+#Cancel:hover {
+    background-color: red;
+}
+
+#Save {
+    background-color: var(--Lavender);
+}
+
+#Save:hover {
+    background-color: green;
+}
+
+.textareaHeight{
+    min-height: 2rem;
+    max-height: 10rem;
+}
+
+@media (max-width: 768px) {
+
+    .profileCon.editMode {
+        flex-direction: column;
+        width: 25rem;
+        height: max-content;
+    }
+    
+    .insideProfileCon {
+        flex-direction: column;
+    }
+    
+    .ProfileForm.show {
+        width: 100%;
+        margin: auto;
+        padding-right: 0;
+    }
+}
